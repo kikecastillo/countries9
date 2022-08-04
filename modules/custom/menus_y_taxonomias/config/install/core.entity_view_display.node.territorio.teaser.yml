@@ -1,0 +1,60 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.territorio.body
+    - field.field.node.territorio.field_area
+    - field.field.node.territorio.field_asoc_state
+    - field.field.node.territorio.field_capital
+    - field.field.node.territorio.field_continent
+    - field.field.node.territorio.field_flag
+    - field.field.node.territorio.field_government
+    - field.field.node.territorio.field_link
+    - field.field.node.territorio.field_local_names
+    - field.field.node.territorio.field_map_position
+    - field.field.node.territorio.field_maps
+    - field.field.node.territorio.field_official_languages
+    - field.field.node.territorio.field_official_name
+    - field.field.node.territorio.field_organizations
+    - field.field.node.territorio.field_populations
+    - field.field.node.territorio.field_subregion
+    - field.field.node.territorio.field_type
+    - image.style.flag
+    - node.type.territorio
+  module:
+    - image
+    - user
+id: node.territorio.teaser
+targetEntityType: node
+bundle: territorio
+mode: teaser
+content:
+  field_flag:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: flag
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_area: true
+  field_asoc_state: true
+  field_capital: true
+  field_continent: true
+  field_government: true
+  field_link: true
+  field_local_names: true
+  field_map_position: true
+  field_maps: true
+  field_official_languages: true
+  field_official_name: true
+  field_organizations: true
+  field_populations: true
+  field_subregion: true
+  field_type: true
+  langcode: true
+  links: true

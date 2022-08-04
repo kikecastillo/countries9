@@ -1,0 +1,31 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.populations.field_population
+    - field.field.paragraph.populations.field_year
+    - paragraphs.paragraphs_type.populations
+id: paragraph.populations.default
+targetEntityType: paragraph
+bundle: populations
+mode: default
+content:
+  field_population:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_year:
+    weight: 0
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden: {  }

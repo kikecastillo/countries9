@@ -1,0 +1,19 @@
+langcode: es
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - business
+id: business_search
+theme: business
+region: header
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Buscar
+  provider: search
+  label_display: visible
+visibility: {  }

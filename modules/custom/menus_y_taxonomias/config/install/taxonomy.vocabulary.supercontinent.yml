@@ -1,0 +1,7 @@
+langcode: es
+status: true
+dependencies: {  }
+name: Supercontinente
+vid: supercontinent
+description: ''
+weight: 0

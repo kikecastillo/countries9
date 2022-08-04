@@ -1,0 +1,27 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_government
+    - node.type.territorio
+    - taxonomy.vocabulary.government
+id: node.territorio.field_government
+field_name: field_government
+entity_type: node
+bundle: territorio
+label: 'Forma de gobierno'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      government: government
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

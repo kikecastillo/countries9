@@ -1,0 +1,7 @@
+langcode: es
+status: true
+dependencies: {  }
+name: 'Forma de gobierno'
+vid: government
+description: ''
+weight: 0

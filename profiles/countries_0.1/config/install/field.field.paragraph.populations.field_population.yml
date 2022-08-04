@@ -1,0 +1,22 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_population
+    - paragraphs.paragraphs_type.populations
+id: paragraph.populations.field_population
+field_name: field_population
+entity_type: paragraph
+bundle: populations
+label: Población
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

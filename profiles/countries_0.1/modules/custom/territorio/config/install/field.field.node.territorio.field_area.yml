@@ -1,0 +1,24 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_area
+    - node.type.territorio
+id: node.territorio.field_area
+field_name: field_area
+entity_type: node
+bundle: territorio
+label: Superficie
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' km<sup>2</sup>'
+field_type: decimal

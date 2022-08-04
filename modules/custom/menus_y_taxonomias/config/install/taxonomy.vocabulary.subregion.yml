@@ -1,0 +1,7 @@
+langcode: es
+status: true
+dependencies: {  }
+name: Subregión
+vid: subregion
+description: ''
+weight: 0

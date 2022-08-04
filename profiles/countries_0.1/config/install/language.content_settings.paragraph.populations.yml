@@ -1,0 +1,15 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.populations
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: paragraph.populations
+target_entity_type_id: paragraph
+target_bundle: populations
+default_langcode: site_default
+language_alterable: true

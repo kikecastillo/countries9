@@ -1,0 +1,10 @@
+langcode: es
+status: true
+dependencies: {  }
+name: 'Página básica'
+type: page
+description: 'Use las <em>páginas básicas</em> para publicar contenido que no varía, como es el caso de una página "Sobre nosotros" o "Acerca de..."'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

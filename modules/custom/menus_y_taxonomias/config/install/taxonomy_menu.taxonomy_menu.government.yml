@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+    - taxonomy.vocabulary.government
+id: government
+label: Government
+vocabulary: government
+menu: main
+expanded: false
+depth: 0
+menu_parent: 'main:menu_link_content:018cffdd-04da-4de4-9995-21cf58473b3b'
+description_field_name: null
+use_term_weight_order: true

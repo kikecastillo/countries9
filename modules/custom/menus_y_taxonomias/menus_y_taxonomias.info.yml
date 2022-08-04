@@ -1,0 +1,22 @@
+name: 'Menus y taxonomías'
+type: module
+core: 8.x
+dependencies:
+  - comment
+  - content_translation
+  - entity_reference_revisions
+  - field
+  - image
+  - language
+  - link
+  - node
+  - paragraphs
+  - path
+  - rdf
+  - system
+  - taxonomy
+  - taxonomy_menu
+  - text
+  - user
+  - views
+version: 8.x-1.0

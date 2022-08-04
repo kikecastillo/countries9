@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: flag
+label: 'flag 150'
+effects:
+  f4c904d3-226c-4cf3-92c4-05f07382ac13:
+    uuid: f4c904d3-226c-4cf3-92c4-05f07382ac13
+    id: image_scale
+    weight: 2
+    data:
+      width: null
+      height: 100
+      upscale: false

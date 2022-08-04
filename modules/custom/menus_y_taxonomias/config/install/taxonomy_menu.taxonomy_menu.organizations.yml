@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+    - taxonomy.vocabulary.organizations
+id: organizations
+label: Organizations
+vocabulary: organizations
+menu: main
+expanded: false
+depth: 0
+menu_parent: 'main:menu_link_content:e8584546-e9bb-411e-a159-8c9df9634971'
+description_field_name: ''
+use_term_weight_order: true

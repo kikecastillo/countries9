@@ -1,0 +1,19 @@
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - business
+id: business_powered
+theme: business
+region: header
+weight: -3
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

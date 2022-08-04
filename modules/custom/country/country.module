@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Prevents validation of decimal numbers
+ * @see https://www.drupal.org/node/2230909
+ */
+function country_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  $field_definition = $context['items']->getFieldDefinition();
+  if ($field_definition->getType() == 'decimal') {
+    $element['value']['#step'] = 'any';
+  }
+}
+

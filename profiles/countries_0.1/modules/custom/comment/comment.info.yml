@@ -1,0 +1,12 @@
+name: 'Default comments'
+description: 'Provides Default comments comment type and related configuration. Permite comentar el contenido'
+type: module
+core: 8.x
+dependencies:
+  - comment
+  - content_translation
+  - field
+  - language
+  - node
+  - rdf
+  - text

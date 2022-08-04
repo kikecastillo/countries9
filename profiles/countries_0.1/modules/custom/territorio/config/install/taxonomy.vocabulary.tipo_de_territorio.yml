@@ -1,0 +1,8 @@
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipo de territorio'
+vid: tipo_de_territorio
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,13 @@
+name: Site
+description: 'Provides site components.'
+type: module
+core: 8.x
+dependencies:
+  - article
+  - block_content
+  - ckeditor
+  - contact
+  - editor
+  - filter
+  - rdf
+  - taxonomy

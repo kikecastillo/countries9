@@ -1,0 +1,19 @@
+name: Territory
+description: 'Provides Territory content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - content_translation
+  - entity_reference_revisions
+  - field
+  - file
+  - image
+  - language
+  - link
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - taxonomy
+  - text
+  - user

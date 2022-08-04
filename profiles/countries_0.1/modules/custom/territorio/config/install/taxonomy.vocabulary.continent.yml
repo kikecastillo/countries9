@@ -1,0 +1,8 @@
+langcode: es
+status: true
+dependencies: {  }
+name: Continente
+vid: continent
+description: ''
+hierarchy: 0
+weight: 0

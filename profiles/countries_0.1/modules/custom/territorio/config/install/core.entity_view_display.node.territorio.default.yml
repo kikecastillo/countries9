@@ -1,0 +1,179 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.territorio.body
+    - field.field.node.territorio.field_area
+    - field.field.node.territorio.field_asoc_state
+    - field.field.node.territorio.field_capital
+    - field.field.node.territorio.field_continent
+    - field.field.node.territorio.field_flag
+    - field.field.node.territorio.field_government
+    - field.field.node.territorio.field_link
+    - field.field.node.territorio.field_local_names
+    - field.field.node.territorio.field_map_position
+    - field.field.node.territorio.field_maps
+    - field.field.node.territorio.field_official_languages
+    - field.field.node.territorio.field_official_name
+    - field.field.node.territorio.field_organizations
+    - field.field.node.territorio.field_populations
+    - field.field.node.territorio.field_subregion
+    - field.field.node.territorio.field_type
+    - node.type.territorio
+  module:
+    - entity_reference_revisions
+    - image
+    - link
+    - user
+id: node.territorio.default
+targetEntityType: node
+bundle: territorio
+mode: default
+content:
+  field_area:
+    weight: 7
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 0
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_asoc_state:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_capital:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_continent:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_flag:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_government:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_link:
+    weight: 15
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_local_names:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_map_position:
+    weight: 11
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_maps:
+    weight: 14
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_official_languages:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_official_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_organizations:
+    weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_populations:
+    type: entity_reference_revisions_entity_view
+    weight: 12
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_subregion:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_type:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  langcode: true

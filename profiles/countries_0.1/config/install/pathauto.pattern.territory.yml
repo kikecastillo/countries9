@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: territory
+label: territory
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  d2118eda-047f-4f8a-afd7-4cef6384e4af:
+    id: node_type
+    bundles:
+      territorio: territorio
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d2118eda-047f-4f8a-afd7-4cef6384e4af
+selection_logic: and
+weight: -5
+relationships: {  }
