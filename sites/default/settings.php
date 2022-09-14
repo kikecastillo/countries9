@@ -256,6 +256,8 @@ $config_directories = array();
  * @see \Drupal\Core\Site\Settings::get()
  */
 
+$settings['file_temp_path'] = '/tmp';
+
 /**
  * The active installation profile.
  *
