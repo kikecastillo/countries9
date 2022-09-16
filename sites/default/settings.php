@@ -728,6 +728,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
 $settings['trusted_host_patterns'] = array(
   'countries\.kaikal\.com$',
+  'countries\.kaikal\.local$',
 );
 
 
@@ -762,15 +763,19 @@ $settings['file_scan_ignore_directories'] = [
 //}
 
 $databases['default']['default'] = array (
-  'database' => 'country2017_db',
-  'username' => 'kk_country_user',
-  'password' => 'm6wI7Yx6TCZQFjAPIg0z',
+  'database' => 'drupal',
+  'username' => 'drupal',
+  'password' => 'drupal',
   'prefix' => 'pai_',
-  'host' => 'localhost',
+  'host' => 'countries_mariadb',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
+
+$settings['file_public_path'] = 'sites/default/files';
+$settings['file_private_path'] = 'sites/default/files/private';
+
 $config_directories['sync'] = 'sites/default/files/config_KE9YIMDR4MfdIjVfMLYUy2ao4q_gv6RZmnzckAQUxt2MRQRbHa8EAMPv2OY5nbn9DI0cWPxyBg/sync';
 //$settings['config_directory_sync'] = 'sites/default/files/config_KE9YIMDR4MfdIjVfMLYUy2ao4q_gv6RZmnzckAQUxt2MRQRbHa8EAMPv2OY5nbn9DI0cWPxyBg/sync';
 //$config['system.logging']['error_level'] = 'verbose';
