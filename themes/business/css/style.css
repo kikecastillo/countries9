@@ -676,7 +676,6 @@ body.sidebar-first #post-content {
 .node {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #EEE;
 }
 
 #post-content h1 {
@@ -1304,15 +1303,13 @@ h3.comment-title a{
 }
 
 .page-node-type-territorio .field--name-field-flag img {
-  width: 470px;
+  width: 300px;
   height: auto;
+  border: 1px solid aliceblue;
 }
 
 img.image-style-flag {
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
+  border: 2px solid aliceblue;
 }
 
 .node__links {
@@ -1487,4 +1484,35 @@ ul.menu a.is-active {
 #views-exposed-form-territories-search .form-item label {
   flex-direction: column;
   display: flex;
+}
+
+.page-node-type-territorio #block-business-page-title {
+  margin-top: 30px;
+}
+
+.page-node-type-territorio .field--name-title {
+  text-transform: uppercase;
+  color: steelblue;
+  font-size: 80px;
+  line-height: 75px;
+}
+
+.page-node-type-territorio .field--label-inline .field__label::after {
+  content: "";
+}
+
+.page-node-type-territorio .field.field--name-field-flag {
+  float: right;
+  width: 30%;
+}
+
+.page-node-type-territorio div.field.field--type-string,
+.page-node-type-territorio div.field.field--type-entity-reference {
+  width: 70%;
+  display: inline-block;
+}
+
+.page-node-type-territorio div.field {
+  font-size: 20px;
+  line-height: 1.5;
 }
