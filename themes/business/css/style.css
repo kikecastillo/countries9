@@ -1303,7 +1303,7 @@ h3.comment-title a{
 }
 
 .page-node-type-territorio .field--name-field-flag img {
-  width: 300px;
+  width: 100%;
   height: auto;
   border: 1px solid aliceblue;
 }
@@ -1516,3 +1516,28 @@ ul.menu a.is-active {
   font-size: 20px;
   line-height: 1.5;
 }
+
+@media only screen and (max-width: 700px) {
+  .page-node-type-territorio .field--name-title {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-node-type-territorio .field--name-title {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .page-node-type-territorio div.field.field--type-string,
+  .page-node-type-territorio div.field.field--type-entity-reference {
+    width: 100%;
+    float: left;
+  }
+
+  .page-node-type-territorio .field.field--name-field-flag {
+    width: 100%;
+  }
+}
+
