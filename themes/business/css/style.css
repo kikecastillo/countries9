@@ -1530,6 +1530,12 @@ ul.menu a.is-active {
 }
 
 @media only screen and (max-width: 500px) {
+  .page-node-type-territorio .field--name-title {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
   .page-node-type-territorio div.field.field--type-string,
   .page-node-type-territorio div.field.field--type-entity-reference {
     width: 100%;
@@ -1540,4 +1546,5 @@ ul.menu a.is-active {
     width: 100%;
   }
 }
+
 
