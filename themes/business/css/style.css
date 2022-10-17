@@ -1517,6 +1517,30 @@ ul.menu a.is-active {
   line-height: 1.5;
 }
 
+/* RESPONSIVE MENU */
+
+.responsive-menu-toggle-icon::before, .responsive-menu-toggle-icon::after, .responsive-menu-toggle-icon span.icon {
+  background-color: #666 !important;
+}
+
+.menu.sub-nav {
+  background-color: white;
+  border: 1px #ccc solid;
+}
+
+ul.menu.sub-nav li.menu-item {
+  padding: 5px;
+  border: 1px #CCC solid;
+}
+
+#horizontal-menu li.menu-item {
+  padding: 5px;
+}
+
+#horizontal-menu li.menu-item span {
+  padding: 0.3em 1em 0.35em;
+}
+
 @media only screen and (max-width: 700px) {
   .page-node-type-territorio .field--name-title {
     font-size: 60px;
