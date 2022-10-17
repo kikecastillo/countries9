@@ -1230,9 +1230,9 @@ h3.comment-title a{
     padding: 0px;
 }
 
-.dropdown-submenu:hover > .dropdown-menu {
-    display: block;
-}
+/*.dropdown-submenu:hover > .dropdown-menu {*/
+/*    display: block;*/
+/*}*/
 
 .dropdown-submenu > a:after {
   content: "\e080";
@@ -1273,9 +1273,9 @@ h3.comment-title a{
 .navbar-nav li:last-child > .dropdown-menu .dropdown-submenu > .dropdown-menu {
   left: -100%;
 }
-.dropdown:hover > .dropdown-menu {
-   display: block;
-}
+/*.dropdown:hover > .dropdown-menu {*/
+/*   display: block;*/
+/*}*/
 
 #home-highlights {
   padding-bottom: 20px;
