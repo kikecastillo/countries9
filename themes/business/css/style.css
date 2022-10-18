@@ -1571,12 +1571,21 @@ ul.menu.sub-nav li.menu-item {
     font-size: 50px;
   }
 
-  .form--inline .form-item {
+  .form--inline .form-item, .form--inline .form-text, select[multiple], select[size] {
     width: 100%;
   }
 
-  select[multiple], select[size] {
-    width: 100%;
+  .form--inline .form-item.js-form-item-field-area-value-max, .form--inline .form-item.js-form-item-field-area-value-min {
+    width: 48%;
+  }
+
+  .js-form-item.form-item.js-form-item-field-area-value-min.form-item-field-area-value-min {
+    padding-right: 1%;
+  }
+
+  .js-form-item.form-item.js-form-item-field-area-value-max.form-item-field-area-value-max {
+    padding-right: 0;
+    margin-right: 0;
   }
 }
 
