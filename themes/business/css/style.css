@@ -1543,14 +1543,21 @@ ul.menu.sub-nav li.menu-item {
   padding: 0.3em 1em 0.35em;
 }
 
+.lang-dropdown-form img.language-icon {
+  padding: 0 !important;
+}
+
+#block-languagedropdownswitchertextodelainterfaz {
+  float: right;
+}
+
 @media only screen and (max-width: 700px) {
   .page-node-type-territorio .field--name-title {
     font-size: 60px;
   }
 
-  #block-alternadordeidiomatextodelainterfaz {
+  #block-languagedropdownswitchertextodelainterfaz {
     z-index: 100;
-    float: right;
     top: 15px;
   }
 
