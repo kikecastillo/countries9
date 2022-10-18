@@ -1570,6 +1570,14 @@ ul.menu.sub-nav li.menu-item {
   .page-node-type-territorio .field--name-title {
     font-size: 50px;
   }
+
+  .form--inline .form-item {
+    width: 100%;
+  }
+
+  select[multiple], select[size] {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 500px) {
