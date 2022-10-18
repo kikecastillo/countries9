@@ -1526,15 +1526,17 @@ ul.menu a.is-active {
 .menu.sub-nav {
   background-color: white;
   border: 1px #ccc solid;
+  width: 228px;
 }
 
 ul.menu.sub-nav li.menu-item {
-  padding: 5px;
-  border: 1px #CCC solid;
+  padding: 5px 0;
 }
 
 #horizontal-menu li.menu-item {
   padding: 5px;
+  border: 0;
+  left: 20px;
 }
 
 #horizontal-menu li.menu-item span {
