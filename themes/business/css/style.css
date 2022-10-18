@@ -1551,6 +1551,10 @@ ul.menu.sub-nav li.menu-item {
   float: right;
 }
 
+#views-exposed-form-territories-search .form-item.form-item-field-area-value-max label {
+  visibility: hidden;
+}
+
 @media only screen and (max-width: 700px) {
   .page-node-type-territorio .field--name-title {
     font-size: 60px;
