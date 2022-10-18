@@ -1547,6 +1547,16 @@ ul.menu.sub-nav li.menu-item {
   .page-node-type-territorio .field--name-title {
     font-size: 60px;
   }
+
+  #block-alternadordeidiomatextodelainterfaz {
+    z-index: 100;
+    float: right;
+    top: 15px;
+  }
+
+  #block-responsivemenumobileicon {
+    margin-top: 10px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
