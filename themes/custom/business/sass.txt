@@ -1,0 +1,7 @@
+sudo apk add --update nodejs npm
+
+sudo npm install -g sass
+
+npm init                  // create package.json
+
+npm install -D webpack webpack-cli
