@@ -382,8 +382,9 @@ h4 a {
   text-decoration: none;
 }
 
-#main-menu .menu a.active {
-  color: #000;
+#main-menu .menu a.active, ul.menu a.active {
+  color: #2E70B1 !important;
+  font-weight: bold;
 }
 
 #main-menu .menu a:focus,
@@ -393,11 +394,12 @@ h4 a {
 }
 
 #main-menu .menu a.active {
-  color: #FFF !important;
+  color: #2E70B1 !important;
+  font-weight: bold;
 }
 
 #main-menu .menu a.active-trail{
-  color: #FFF !important;
+  font-weight: bold;
   background: #C00;
 }
 
@@ -1553,6 +1555,55 @@ ul.menu.sub-nav li.menu-item {
 
 #views-exposed-form-territories-search .form-item.form-item-field-area-value-max label {
   visibility: hidden;
+}
+
+.path-frontpage .page-title {
+  display: none;
+}
+
+.bef-exposed-form .form--inline .form-item {
+  float: left;
+}
+
+.view-filters {
+
+}
+
+.view-filters #edit-reset {
+  display: none;
+}
+
+.view-filters {
+  height: 50px;
+  position: relative;
+  background-color: #232323;
+  margin-bottom: 40px;
+}
+
+.view-filters details#edit-secondary summary {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: flex;
+  left: 20px;
+  border: 1px solid gray;
+  padding: 16px 30px 11px;
+  color: #90d6ff;
+  font-size: 15px;
+}
+
+.view-filters #views-exposed-form-territories-search {
+  background-color: #232323;
+}
+
+.view-filters #views-exposed-form-territories-search .detail-wrapper {
+  margin-top: 50px;
+}
+
+.view-filters #views-exposed-form-territories-search .detail-wrapper label {
+  color: white;
 }
 
 @media only screen and (max-width: 700px) {
