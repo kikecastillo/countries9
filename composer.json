@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "1.9",
         "drupal/adminimal_theme": "^1.6",
+        "drupal/better_exposed_filters": "^5.2",
         "drupal/content_export_csv": "^4.3",
         "drupal/core-composer-scaffold": "^8.9.20",
         "drupal/core-project-message": "^8.9.20",

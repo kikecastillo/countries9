@@ -763,11 +763,11 @@ $settings['file_scan_ignore_directories'] = [
 //}
 
 $databases['default']['default'] = array (
-  'database' => 'drupal',
-  'username' => 'drupal',
-  'password' => 'drupal',
+  'database' => 'country2017_db',
+  'username' => 'kk_country_user',
+  'password' => 'm6wI7Yx6TCZQFjAPIg0z!',
   'prefix' => 'pai_',
-  'host' => 'countries_mariadb',
+  'host' => 'localhost',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
