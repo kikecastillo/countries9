@@ -3,14 +3,12 @@
  * @file
  * Functions to support theming in the Business theme.
  */
-define('THEME_PATH', base_path() . drupal_get_path('theme', 'business'));
+define('THEME_PATH', base_path() . \Drupal::service('extension.list.theme')->getPath('business'));
 // Change the value to increase the slideshow.
-define('SLIDESHOW_COUNT', 5);
+const SLIDESHOW_COUNT = 5;
 
-use Drupal\Component\Utility\SafeMarkup;
 use Drupal\Component\Utility\Xss;
 use Drupal\Core\Template\Attribute;
-use Drupal\file\Plugin\Core\Entity\FileInterface;
 
 /**
  * Override or insert variables into the page template.
@@ -47,7 +45,7 @@ function business_preprocess_page(&$vars) {
       $file = \Drupal\file\Entity\File::load($fid[0]);
       if (!empty($file)) {
         $uri = $file->getFileUri();
-        $image_path = file_create_url($uri);
+        $image_path = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
       }
       else {
         $image_path = THEME_PATH . "/images/slide-{$i}.jpg";
@@ -65,7 +63,7 @@ function business_preprocess_page(&$vars) {
   if (theme_get_setting('footer_copyright', 'business') || theme_get_setting('footer_credits', 'business')) {
     if (theme_get_setting('footer_copyright', 'business')) {
       $footer_copyright = array(
-        '@date' => format_date(REQUEST_TIME, 'custom', 'Y'),
+        '@date' => Drupal::service('date.formatter')->format(\Drupal::time()->getRequestTime(), 'custom', 'Y'),
         '@sitename' => \Drupal::config('system.site')->get('name'),
       );
       $vars['copyright']['footer_copyright'] = t("Copyright &copy; @date, @sitename", $footer_copyright);
@@ -150,7 +148,7 @@ function business_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\For
       '#default_value' => theme_get_setting("slide_url_{$i}", "business"),
     );
   }
-  $filename = drupal_get_path('theme', 'business') . '/business.theme';
+  $filename = \Drupal::service('extension.list.theme')->getPath('business') . '/business.theme';
   $form_state->addBuildInfo('files', array($filename));
   // Custom submit to save the file permenant.
   $form['#submit'][] = 'business_settings_form_submit';

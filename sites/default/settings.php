@@ -729,6 +729,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['trusted_host_patterns'] = array(
   'countries\.kaikal\.com$',
   'countries\.kaikal\.local$',
+  'countries\.localhost$',
 );
 
 
@@ -758,24 +759,24 @@ $settings['file_scan_ignore_directories'] = [
  * Keep this code block at the end of this file to take full effect.
  */
 
-//if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-//  include $app_root . '/' . $site_path . '/settings.local.php';
-//}
+if (file_exists(__DIR__ . '/settings.local.php')) {
+  include __DIR__ . '/settings.local.php';
+}
 
-$databases['default']['default'] = array (
-  'database' => 'country2017_db',
-  'username' => 'kk_country_user',
-  'password' => 'm6wI7Yx6TCZQFjAPIg0z!',
-  'prefix' => 'pai_',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
+//$databases['default']['default'] = array (
+//  'database' => 'country2017_db',
+//  'username' => 'kk_country_user',
+//  'password' => 'm6wI7Yx6TCZQFjAPIg0z!',
+//  'prefix' => 'pai_',
+//  'host' => 'localhost',
+//  'port' => '3306',
+//  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+//  'driver' => 'mysql',
+//);
 
 $settings['file_public_path'] = 'sites/default/files';
 $settings['file_private_path'] = 'sites/default/files/private';
 
 $config_directories['sync'] = 'sites/default/files/config_KE9YIMDR4MfdIjVfMLYUy2ao4q_gv6RZmnzckAQUxt2MRQRbHa8EAMPv2OY5nbn9DI0cWPxyBg/sync';
-//$settings['config_directory_sync'] = 'sites/default/files/config_KE9YIMDR4MfdIjVfMLYUy2ao4q_gv6RZmnzckAQUxt2MRQRbHa8EAMPv2OY5nbn9DI0cWPxyBg/sync';
+$settings['config_sync_directory'] = 'sites/default/files/config_KE9YIMDR4MfdIjVfMLYUy2ao4q_gv6RZmnzckAQUxt2MRQRbHa8EAMPv2OY5nbn9DI0cWPxyBg/sync';
 //$config['system.logging']['error_level'] = 'verbose';
