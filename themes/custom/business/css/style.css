@@ -203,13 +203,15 @@ em {
 }
 
 #page-wrapper {
-  padding: 20px;
   background: #FFF;
   margin: 0 auto;
-  padding-top: 0px;
+  border-top: 0 !important;
+  padding: 0;
+  box-shadow: 0 0 13px 3px rgba(0,0,0,.23);
 }
+
 #main {
-  padding: 30px 0 0;
+  padding: 0;
 }
 
 /*-------------------------------------------*
@@ -718,10 +720,11 @@ body.sidebar-first #post-content {
 /*Copyright
 /*-------------------------------------------*/
 #copyright {
-  border-top: 1px solid #EEE;
-  padding-top: 18px;
-  margin-top:10px;
+  padding: 20px;
   font-size: 12px;
+  text-align: center;
+  color: #f8f8f8;
+  background-color: #232323;
 }
 
 .credits {
@@ -1304,6 +1307,10 @@ h3.comment-title a{
   font-size: 12px;
 }
 
+.page-node-type-territorio .region-content {
+  padding: 20px 40px;
+}
+
 .page-node-type-territorio .field--name-field-flag img {
   width: 100%;
   height: auto;
@@ -1311,7 +1318,7 @@ h3.comment-title a{
 }
 
 img.image-style-flag {
-  border: 2px solid aliceblue;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,.23);
 }
 
 .node__links {
@@ -1486,6 +1493,7 @@ ul.menu a.is-active {
 #views-exposed-form-territories-search .form-item label {
   flex-direction: column;
   display: flex;
+  color: #f1f1f1;
 }
 
 .page-node-type-territorio #block-business-page-title {
@@ -1526,13 +1534,18 @@ ul.menu a.is-active {
 }
 
 .menu.sub-nav {
-  background-color: white;
+  background-color: #232323;
   border: 1px #ccc solid;
   width: 228px;
 }
 
 ul.menu.sub-nav li.menu-item {
   padding: 5px 0;
+}
+
+#horizontal-menu {
+  background-color: #232323;
+  color: #2E70B1;
 }
 
 #horizontal-menu li.menu-item {
@@ -1545,12 +1558,22 @@ ul.menu.sub-nav li.menu-item {
   padding: 0.3em 1em 0.35em;
 }
 
+#horizontal-menu li.menu-item span:hover {
+  font-weight: bold;
+}
+
 .lang-dropdown-form img.language-icon {
   padding: 0 !important;
 }
 
 #block-languagedropdownswitchertextodelainterfaz {
-  float: right;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+#main .main-content {
+  padding: 0;
 }
 
 #views-exposed-form-territories-search .form-item.form-item-field-area-value-max label {
@@ -1565,6 +1588,13 @@ ul.menu.sub-nav li.menu-item {
   float: left;
 }
 
+.view-header {
+  background-color: #232323;
+  color: #f8f8f8;
+  text-align: right;
+  padding-right: 20px;
+}
+
 .view-filters {
 
 }
@@ -1574,13 +1604,13 @@ ul.menu.sub-nav li.menu-item {
 }
 
 .view-filters {
-  height: 50px;
+  height: 40px;
   position: relative;
   background-color: #232323;
   margin-bottom: 40px;
 }
 
-.view-filters details#edit-secondary summary {
+.view-filters #views-exposed-form-territories-search summary {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -1588,10 +1618,33 @@ ul.menu.sub-nav li.menu-item {
   transform: translateY(-50%);
   display: flex;
   left: 20px;
-  border: 1px solid gray;
-  padding: 16px 30px 11px;
-  color: #90d6ff;
+  padding: 9px 30px 8px;
+  color: #2E70B1;
   font-size: 15px;
+}
+
+.view-filters #views-exposed-form-territories-search summary:hover {
+  font-weight: bold;
+}
+
+#views-exposed-form-territories-search .form--inline.clearfix {
+  padding-top: 25px;
+}
+
+.view-content {
+  padding: 30px 20px;
+}
+
+.view-footer {
+  text-align: center;
+  background-color: #232323;
+  padding: 20px;
+  color: #f8f8f8;
+}
+
+.horizontal-menu > li > a {
+  background-color: #232323;
+  font-weight: bold;
 }
 
 .view-filters #views-exposed-form-territories-search {

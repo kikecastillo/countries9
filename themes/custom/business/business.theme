@@ -35,7 +35,7 @@ function business_preprocess_page(&$vars) {
   }
 
   else {
-    $vars['contentlayout'] = 'col-lg-12 centered ';
+    $vars['contentlayout'] = 'main-content col-lg-12 centered ';
   }
   $show_slideshow = theme_get_setting('slideshow_display', 'business');
   if ($vars['is_front'] && $show_slideshow) {
