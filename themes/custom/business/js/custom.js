@@ -4,7 +4,7 @@
 //    animation: "slide"
 //  });
 //});
-jQuery(document).click(function () {
-  jQuery('#views-exposed-form-territories-search details').removeAttr('open');
-});
+//jQuery(document).click(function () {
+//  jQuery('#views-exposed-form-territories-search details').removeAttr('open');
+//});
 
