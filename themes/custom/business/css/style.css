@@ -1307,11 +1307,13 @@ h3.comment-title a{
   font-size: 12px;
 }
 
-.page-node-type-territorio .region-content {
+.page-node-type-territorio .region-content,
+.page-node-type-empire .region-content {
   padding: 20px 40px;
 }
 
-.page-node-type-territorio .field--name-field-flag img {
+.page-node-type-territorio .field--name-field-flag img,
+.page-node-type-empire .field--name-field-flag img {
   width: 100%;
   height: auto;
   border: 1px solid aliceblue;
@@ -1466,7 +1468,8 @@ tr:nth-child(odd) {background: #FFF}
   top: 90%;
 }
 
-.node--type-territorio h2 {
+.node--type-territorio h2,
+.node--type-empire h2 {
   font-size: 12px;
 }
 
@@ -1496,7 +1499,8 @@ ul.menu a.is-active {
   color: #f1f1f1;
 }
 
-.page-node-type-territorio #block-business-page-title {
+.page-node-type-territorio #block-business-page-title,
+.page-node-type-empire #block-business-page-title {
   margin-top: 30px;
 }
 
