@@ -1434,7 +1434,13 @@ tr:nth-child(odd) {background: #FFF}
   width: auto !important;
 }
 
-.view-id-continents .views-row, .view-taxonomy-term .views-row, .view-recognition .views-row, .view-taxonomy-term .views-row, .view-id-territories .views-row, .view-government .views-row {
+.view-id-continents .views-row,
+.view-taxonomy-term .views-row,
+.view-recognition .views-row,
+.view-taxonomy-term .views-row,
+.view-id-territories .views-row,
+.view-associated-states .views-row,
+.view-government .views-row {
   float: left;
   margin-right: 15px;
   min-width: 218px;
