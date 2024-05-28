@@ -1,7 +1,0 @@
-langcode: es
-status: true
-dependencies: {  }
-name: 'Tipo de territorio'
-vid: tipo_de_territorio
-description: ''
-weight: 0

@@ -1,7 +1,0 @@
-langcode: es
-status: true
-dependencies: {  }
-id: comment
-label: 'Comentarios predeterminados'
-target_entity_type_id: node
-description: 'Permite comentar el contenido'

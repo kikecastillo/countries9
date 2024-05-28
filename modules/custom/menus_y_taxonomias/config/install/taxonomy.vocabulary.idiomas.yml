@@ -1,7 +1,0 @@
-langcode: es
-status: true
-dependencies: {  }
-name: Idiomas
-vid: idiomas
-description: ''
-weight: 0

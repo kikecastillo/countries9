@@ -1,6 +1,0 @@
-name: Country Module
-description: Custom Country module
-package: Custom
-
-type: module
-core_version_requirement: ^8.8 || ^9
