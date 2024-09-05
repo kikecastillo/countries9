@@ -257,7 +257,7 @@ class EntityExportCsvManager implements EntityExportCsvManagerInterface {
       }
     }
     $event = new EntityExportCsvFieldsSupportedEvent($options, $entity_type_id, $bundle, $return_field_definition);
-    $this->eventDispatcher->dispatch(EntityExportCsvEvents::ENTITY_EXPORT_CSV_FIELDS_SUPPORTED, $event);
+    $this->eventDispatcher->dispatch($event, EntityExportCsvEvents::ENTITY_EXPORT_CSV_FIELDS_SUPPORTED);
     $options = $event->getFields();
     return $options;
   }
@@ -272,7 +272,7 @@ class EntityExportCsvManager implements EntityExportCsvManagerInterface {
       $options = array_intersect_key($options, $bundle_fields_settings);
     }
     $event = new EntityExportCsvFieldsEnabledEvent($options, $entity_type_id, $bundle, $return_field_definition);
-    $this->eventDispatcher->dispatch(EntityExportCsvEvents::ENTITY_EXPORT_CSV_FIELDS_ENABLE, $event);
+    $this->eventDispatcher->dispatch($event, EntityExportCsvEvents::ENTITY_EXPORT_CSV_FIELDS_ENABLE);
     $options = $event->getFields();
     return $options;
   }
@@ -325,7 +325,7 @@ class EntityExportCsvManager implements EntityExportCsvManagerInterface {
     if (!empty($entity_type_id)) {
       $query->condition('entity_type_id', $entity_type_id);
     }
-    $result = $query->execute();
+    $result = $query->accessCheck(TRUE)->execute();
     if (!empty($result)) {
       $entity_export_csv = $this->entityTypeManager->getStorage('entity_export_csv')->loadMultiple($result);
     }
@@ -339,7 +339,7 @@ class EntityExportCsvManager implements EntityExportCsvManagerInterface {
     $delimiters = [
       ','  => $this->t('Comma (,)'),
       ';'  => $this->t('Semicolon (;)'),
-      '\t' => $this->t('Tab (\t)'),
+      "\t" => $this->t('Tab (\t)'),
       ':'  => $this->t('Colon (:)'),
       '|'  => $this->t('Pipe (|)'),
       '.'  => $this->t('Period (.)'),

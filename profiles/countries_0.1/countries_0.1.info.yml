@@ -1,7 +1,7 @@
 name: Default
 description: 'First bundle with main features'
 type: profile
-core: 8.x
+core_version_requirement: ^9 || ^10 || ^11
 dependencies:
   - article
   - automated_cron

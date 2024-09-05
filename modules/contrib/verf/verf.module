@@ -68,7 +68,7 @@ function verf_views_data_alter(array &$data) {
 
         // Only add to entity_reference fields.
         $base_field_storage_definition = $base_field_definitions[$field_name]->getFieldStorageDefinition();
-        if ($base_field_storage_definition->getType() !== 'entity_reference') {
+        if ($base_field_storage_definition->hasCustomStorage() || $base_field_storage_definition->getType() !== 'entity_reference') {
           continue;
         }
 

@@ -780,3 +780,5 @@ $settings['file_private_path'] = 'sites/default/files/private';
 $config_directories['sync'] = 'sites/default/files/config_KE9YIMDR4MfdIjVfMLYUy2ao4q_gv6RZmnzckAQUxt2MRQRbHa8EAMPv2OY5nbn9DI0cWPxyBg/sync';
 $settings['config_sync_directory'] = 'sites/default/files/config_KE9YIMDR4MfdIjVfMLYUy2ao4q_gv6RZmnzckAQUxt2MRQRbHa8EAMPv2OY5nbn9DI0cWPxyBg/sync';
 //$config['system.logging']['error_level'] = 'verbose';
+
+$settings['state_cache']  = TRUE;

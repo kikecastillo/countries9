@@ -1,7 +1,7 @@
 name: Territory
 description: 'Provides Territory content type and related configuration. '
 type: module
-core: 8.x
+core_version_requirement: ^9 || ^10 || ^11
 dependencies:
   - content_translation
   - entity_reference_revisions

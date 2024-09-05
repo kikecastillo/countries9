@@ -2,7 +2,7 @@ name: 'Business'
 type: theme
 description: 'Business is a Responsive business Drupal 8 theme. Developed by <a href="http://dropthemes.in">Dropthemes.in</a>.'
 base theme: classy
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^8.8 || ^9 || ^10 || ^11
 libraries:
   - business/business-bootstrap
   - business/global-css

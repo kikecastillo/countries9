@@ -69,8 +69,8 @@ interface FieldTypeExportInterface extends PluginInspectionInterface {
    * @param array $options
    *   An array of additionnal options.
    *
-   * @return string
-   *   The string value to be export in the CSV file.
+   * @return array
+   *   An array of value to be export in the CSV file.
    */
   public function export(ContentEntityInterface $entity, FieldDefinitionInterface $field_definition, array $options = []);
 

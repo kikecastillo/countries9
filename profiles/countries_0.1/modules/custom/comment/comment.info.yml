@@ -1,7 +1,7 @@
 name: 'Default comments'
 description: 'Provides Default comments comment type and related configuration. Permite comentar el contenido'
 type: module
-core: 8.x
+core_version_requirement: ^9 || ^10 || ^11
 dependencies:
   - comment
   - content_translation

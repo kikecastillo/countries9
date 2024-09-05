@@ -157,7 +157,7 @@ class EntityExportCsvBatch {
     }
     if (empty($context['sandbox'])) {
       $count_query = clone $query;
-      $total = $count_query->count()->execute();
+      $total = $count_query->count()->accessCheck(TRUE)->execute();
       $context['sandbox'] = [];
       $context['sandbox']['batch'] = 0;
       $context['sandbox']['iterations'] = abs(ceil($total / $limit));
@@ -171,7 +171,7 @@ class EntityExportCsvBatch {
     $iterations = $context['sandbox']['iterations'];
 
     $offset = $batch * $limit;
-    $entities = $query->range($offset, $limit)->execute();
+    $entities = $query->range($offset, $limit)->accessCheck(TRUE)->execute();
     $handle = fopen($context['results']['file_path'], 'a');
     foreach ($entities as $entity_id) {
       $entity = $storage->load($entity_id);
@@ -303,7 +303,7 @@ class EntityExportCsvBatch {
     $time = time();
     $filename = $entity_type_id . '_' . $bundle . '_' . $time . '.csv';
     $destination = $directory . '/' . $filename;
-    $file = file_save_data('', $destination, FileSystemInterface::EXISTS_REPLACE);
+    $file = \Drupal::service('file.repository')->writeData('', $destination, FileSystemInterface::EXISTS_REPLACE);
     $file->setTemporary();
     $file->save();
     $file_path = $file_system->realpath($destination);

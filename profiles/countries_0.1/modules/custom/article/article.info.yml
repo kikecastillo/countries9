@@ -1,7 +1,7 @@
 name: Article
 description: 'Provides Article content type and related configuration. Use los <em>artículos</em> para contenido que tenga relevancia temporal como las noticias o las publicaciones en blogs.'
 type: module
-core: 8.x
+core_version_requirement: ^9 || ^10 || ^11
 dependencies:
   - comment
   - content_translation

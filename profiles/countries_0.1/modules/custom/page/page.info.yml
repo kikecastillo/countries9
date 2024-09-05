@@ -1,7 +1,7 @@
 name: 'Basic page'
 description: 'Provides Basic page content type and related configuration. Use las <em>páginas básicas</em> para publicar contenido que no varía, como es el caso de una página "Sobre nosotros" o "Acerca de..."'
 type: module
-core: 8.x
+core_version_requirement: ^9 || ^10 || ^11
 dependencies:
   - content_translation
   - field

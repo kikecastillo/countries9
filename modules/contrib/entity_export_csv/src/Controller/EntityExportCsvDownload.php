@@ -135,8 +135,10 @@ class EntityExportCsvDownload implements ContainerInjectionInterface {
         $this->t('Missing or not found entity content exported file.')
       );
     }
-
-    return (new BinaryFileResponse($file_uri))
+    $headers = array (
+      'Content-Type'  => 'text/csv',
+    );
+    return (new BinaryFileResponse($file_uri, 200, $headers))
       ->deleteFileAfterSend(TRUE)
       ->setContentDisposition('attachment', basename($file_uri));
   }

@@ -20,6 +20,7 @@ class AdminToolbarAlterTest extends BrowserTestBase {
     'toolbar',
     'breakpoint',
     'admin_toolbar',
+    'user',
   ];
 
   /**
@@ -37,14 +38,20 @@ class AdminToolbarAlterTest extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
-    // Create and log in an administrative user.
-    $this->adminUser = $this->drupalCreateUser([
+    $perms = [
       'access toolbar',
       'access administration pages',
-    ]);
+      'administer site configuration',
+      'administer permissions',
+      'administer users',
+      'administer account settings',
+    ];
+
+    // Create and log in an administrative user.
+    $this->adminUser = $this->drupalCreateUser($perms);
     $this->drupalLogin($this->adminUser);
   }
 

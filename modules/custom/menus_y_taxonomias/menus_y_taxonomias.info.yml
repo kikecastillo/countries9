@@ -1,6 +1,6 @@
 name: 'Menus y taxonomías'
 type: module
-core: 8.x
+core_version_requirement: ^10 || ^11
 dependencies:
   - comment
   - content_translation
