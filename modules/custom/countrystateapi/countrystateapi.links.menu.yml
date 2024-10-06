@@ -1,0 +1,5 @@
+countrystateapi.admin:
+  title: 'Country State API settings'
+  route_name: countrystateapi.admin
+  parent: system.admin_config
+  weight: -9

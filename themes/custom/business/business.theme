@@ -175,3 +175,16 @@ function business_settings_form_submit(&$form, \Drupal\Core\Form\FormStateInterf
     }
   }
 }
+
+/**
+ * @param $variables
+ * @return void
+ */
+function business_preprocess_node(&$variables) {
+  if ($variables['node']->getType() == 'territorio') {
+    $node = $variables['node'];
+    if (!empty($node->get('field_iso2')->value)) {
+      $variables['country_state_info'] = \Drupal::service('countrystateapi.service')->getCountryInfo($node->get('field_iso2')->value);
+    }
+  }
+}

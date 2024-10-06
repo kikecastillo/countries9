@@ -1,0 +1,7 @@
+countrystateapi.admin:
+  path: '/admin/config/countrystateapi'
+  defaults:
+    _form: '\Drupal\countrystateapi\Form\CountryStateForm'
+    _title: 'Country State API settings'
+  requirements:
+    _permission: 'access administration pages'
