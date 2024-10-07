@@ -101,6 +101,7 @@ class CountryStateForm extends FormBase {
       '#type' => 'submit',
       '#value' => $this->t('Save'),
     ];
+    return $form;
   }
 
   /**
