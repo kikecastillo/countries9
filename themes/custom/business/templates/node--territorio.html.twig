@@ -97,39 +97,40 @@
     {{ content }}
   </div>
 
-  <div class="country-state-api">
-    <ul>
-      {% if country_state_info.name %}
-        <li><strong>{{ country_state_info.numeric_code }}</strong> {{ country_state_info.emoji }} {{ country_state_info.emojiU }}</li>
-      {% endif %}
-      {% if country_state_info.numeric_code %}
-        <li>Numeric code: {{ country_state_info.numeric_code }}</li>
-      {% endif %}
-      {% if country_state_info.phonecode %}
-        <li>Phone code: +{{ country_state_info.phone_code }}</li>
-      {% endif %}
-      {% if country_state_info.currency %}
-        <li>Currency: {{ country_state_info.currency_name }} - {{ country_state_info.currency }} - {{ country_state_info.currency_symbol }}</li>
-      {% endif %}
-      {% if country_state_info.tld %}
-        <li>TLD: {{ country_state_info.tld }}</li>
-      {% endif %}
-      {% if country_state_info.native %}
-        <li>Native: {{ country_state_info.native }}</li>
-      {% endif %}
-      {% if country_state_info.nationality %}
-        <li>Nationality: {{ country_state_info.nationality }}</li>
-      {% endif %}
-      {% if country_state_info.latitude %}
-        <li>Latitude: {{ country_state_info.latitude }}</li>
-      {% endif %}
-      {% if country_state_info.longitude %}
-        <li>Longitude: {{ country_state_info.longitude }}</li>
-      {% endif %}
-    </ul>
-  </div>
-
-
+  {% if country_state_info.name %}
+    <div class="country-state-api">
+      <h3 class="country-state-title">+info</h3>
+      <ul>
+        {% if country_state_info.name %}
+          <li><strong>{{ country_state_info.name }}</strong> {{ country_state_info.emoji }}</li>
+        {% endif %}
+        {% if country_state_info.numeric_code %}
+          <li>Numeric code: {{ country_state_info.numeric_code }}</li>
+        {% endif %}
+        {% if country_state_info.phonecode %}
+          <li>Phone code: +{{ country_state_info.phonecode }}</li>
+        {% endif %}
+        {% if country_state_info.currency %}
+          <li>Currency: {{ country_state_info.currency_name }} - {{ country_state_info.currency }} - {{ country_state_info.currency_symbol }}</li>
+        {% endif %}
+        {% if country_state_info.tld %}
+          <li>TLD: {{ country_state_info.tld }}</li>
+        {% endif %}
+        {% if country_state_info.native %}
+          <li>Native: {{ country_state_info.native }}</li>
+        {% endif %}
+        {% if country_state_info.nationality %}
+          <li>Nationality: {{ country_state_info.nationality }}</li>
+        {% endif %}
+        {% if country_state_info.latitude %}
+          <li>Latitude: {{ country_state_info.latitude }}</li>
+        {% endif %}
+        {% if country_state_info.longitude %}
+          <li>Longitude: {{ country_state_info.longitude }}</li>
+        {% endif %}
+      </ul>
+    </div>
+  {% endif %}
 
   {{ title_prefix }}
     {% if not page %}
