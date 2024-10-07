@@ -40,7 +40,60 @@ class CountryStateService {
 
       curl_close($curl);
 
-      return $response;
+      return json_decode($response);
+    }
+    return [];
+  }
+
+  /**
+   * @return array|mixed
+   */
+  public function getCountries() {
+    if (!empty($this->getApiKey())) {
+      $curl = curl_init();
+
+      curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.countrystatecity.in/v1/countries',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => array(
+          'X-CSCAPI-KEY: ' . $this->getApiKey()
+        ),
+      ));
+
+      $response = curl_exec($curl);
+
+      curl_close($curl);
+
+      return json_decode($response);
+    }
+    return [];
+  }
+
+  /**
+   * @return array|mixed
+   */
+  public function getCountriesFormat() {
+    if (!empty($this->getApiKey())) {
+      $curl = curl_init();
+
+      curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.countrystatecity.in/v1/countries',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => array(
+          'X-CSCAPI-KEY: ' . $this->getApiKey()
+        ),
+      ));
+
+      $response = curl_exec($curl);
+
+      curl_close($curl);
+
+      $values = json_decode($response);
+      $result = [];
+      foreach ($values as $value) {
+        $result[$value->name] = $value;
+      }
+      return $result;
     }
     return [];
   }

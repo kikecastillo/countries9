@@ -1,0 +1,23 @@
+<?php
+
+function countrystateapi_update_10001() {
+  $countries_api = \Drupal::service('countrystateapi.service')->getCountriesFormat();
+
+  $nids = \Drupal::entityQuery('node')->condition('type', 'territorio')->execute();
+  $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
+
+  $update_countries = 'Updated countries: ';
+  $nonupdate_countries = 'Non-updated countries: ';
+
+  foreach ($nodes as $node) {
+    if (array_key_exists($node->label(), $countries_api)) {
+      $node->set('field_iso2', $countries_api[$node->label()]->iso2);
+      $node->save();
+      $update_countries .= $node->label() . ', ';
+    } else {
+      $nonupdate_countries .= $node->label() . ', ';
+    }
+    \Drupal::messenger()->addStatus($update_countries);
+    \Drupal::messenger()->addStatus($nonupdate_countries);
+  }
+}
