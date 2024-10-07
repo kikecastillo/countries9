@@ -3,7 +3,7 @@
 function countrystateapi_update_10001() {
   $countries_api = \Drupal::service('countrystateapi.service')->getCountriesFormat();
 
-  $nids = \Drupal::entityQuery('node')->condition('type', 'territorio')->execute();
+  $nids = \Drupal::entityQuery('node')->condition('type', 'territorio')->accessCheck(TRUE)->execute();
   $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
 
   $update_countries = 'Updated countries: ';
