@@ -17,7 +17,7 @@ function countrystateapi_update_10001() {
     } else {
       $nonupdate_countries .= $node->label() . ', ';
     }
-    \Drupal::messenger()->addStatus($update_countries);
-    \Drupal::messenger()->addStatus($nonupdate_countries);
   }
+  \Drupal::messenger()->addStatus($update_countries);
+  \Drupal::messenger()->addStatus($nonupdate_countries);
 }
